@@ -1,0 +1,12 @@
+.benefits {
+  background-image: url("../../img/bg/promo-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative; }
+
+.benefits__container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
