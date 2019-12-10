@@ -4,6 +4,12 @@
   background-size: cover;
   background-position: center center;
   position: relative;
+  @include tablets {
+    padding-bottom: rem(100px);
+  }
+  @include phones {
+    padding-bottom: rem(60px);
+  }
 }
 .promo__container {
   height: 100%;
@@ -13,30 +19,61 @@
 .promo__wrapper {
   display: flex;
   align-items: center;
-}
+  // justify-content: center;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 rem(100px);
+    // margin-top: 10%;
+  }
+  @include phones {
+    padding: 0;
 
+  }
+}
+.promo__img {
+  max-width: 100%;
+  max-height: 100%;
+  @include phones {
+    width: 75%;
+  }
+}
 .promo__title {
-  margin-left: 15px;
-  padding-top: 80px;
+  margin-left: rem(15px);
+  margin-top: rem(80px);
+  @include tablets {
+    margin-top: rem(50px);
+    margin-left: 0;
+    // padding-top: rem(45px);
+    text-align: center;
+    // width: 100%;
+  }
+  @include phones {
+    font-size: 4.4rem;
+  }
+  
 }
 
 .promo__subtitle {
   font-family: "Lifehack-Medium";
-  margin-top: 25px;
-  font-size: 65px;
+  margin-top: rem(25px);
+  font-size: rem(65px);
   color: $white;
   line-height: 1;
+  @include phones {
+    font-size: 3.8rem;
+  }
 }
 
 .promo__scroll-btn {
-  width: 29px;
-  height: 15px;
-  background-image: url("../img/icons/arrow-scroll.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: block;
+  width: rem(30px);
+  height: rem(17px);
   position: absolute;
-  bottom: 40px;
+  bottom: rem(40px);
   left: 50%;
-  transform: translateX(-50%);
+}
+.arrow-scroll-icon {
+  width: 100%;
+  height: 100%;
 }

@@ -1,0 +1,7 @@
+.order {
+  background-image: url("../img/bg/form-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative; 
+}

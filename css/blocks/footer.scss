@@ -1,29 +1,81 @@
 .footer {
-  background-color: #565353;
-  background-image: url("../img/bg/footer-bg.png");
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-position: center center;
-  color: $white;
+position: absolute;
+bottom: 0;
+color: $white;
+// width: 100%;
+// z-index: 1;
+// padding-bottom: rem(12px);
+background-image: url("/img/bg/form-bg.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center center;
 }
 
 .footer__container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // justify-content: space-between;
+  // align-items: center;
+  padding-top: rem(10px);
+  padding-bottom: rem(12px);
+  @include phones {
+    flex-direction: column;
+    align-items: center;
+  }
 }
+.footer__left {
+  width: 50%;
+  @include phones {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.footer__right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @include phones {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
 .contacts {
   display: flex;
   flex-direction: column;
-  padding-top: 10px;
-  padding-bottom: 12px;
   font-family: 'Ubuntu';
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
   line-height: 1.71;
+  @include phones {
+    align-items: center;
+    margin-bottom: rem(15px);
+    font-size: rem(16px);
+  }
 }
 .contacts__tel {
   color: $orange;
   text-decoration: none;
   font-weight: bold;
+}
+.socials__list {
+  display: flex;
+  color: $white;
+  align-items: center;
+}
+.social-icon {
+  width: rem(23px);
+  height: rem(23px);
+  opacity: 0.3;
+  color: $white;
+  &:hover {
+    opacity: 1;
+  }
+}
+.socials__item {
+  margin-left: rem(20px);
 }

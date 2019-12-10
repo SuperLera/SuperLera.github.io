@@ -1,9 +1,13 @@
 .btn {
-  padding: 11px 15px;
-  border-radius: 5px;
+  padding: rem(10px) rem(15px);
+  border-radius: rem(5px);
   background-color: $red;
   text-transform: uppercase;
   text-decoration: none;
   color: $white;
-  font-size: 13px;
+  font-size: rem(13px);
+  border-color: transparent;
+  cursor: pointer;
+  outline: none;
+  font-family: 'Ubuntu';
 }

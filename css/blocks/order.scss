@@ -1,0 +1,180 @@
+.order {
+  background-image: url("../img/bg/form-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  // position: relative;
+}
+
+.order__title {
+  text-align: center;
+  margin-bottom: rem(45px);
+  @include phones {
+  font-size: rem(55px);
+}
+}
+.order__form-elem {
+  display: flex;
+  @include tablets {
+    flex-direction: column;
+    padding: 0 rem(145px);
+  }
+  @include phones {
+    flex-direction: column;
+    padding: 0;
+  }
+}
+
+.order__form-col {
+  width: 50%;
+  margin-left: rem(20px);
+  &:first-child {
+    margin-left: 0;
+  }
+  @include tablets {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  @include phones {
+    margin-bottom: rem(15px);
+  }
+  &:last-child .order__form-row{
+    @include phones {
+      margin-bottom: rem(30px);
+    }
+  }
+}
+
+.order__form-row {
+  margin-bottom: rem(19px);
+  display: flex;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @include phones {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.order__form-block {
+width: 100%;
+margin-left: rem(20px);
+&:first-child {
+  margin-left: 0;
+}
+@include phones {
+  &:nth-child(4){
+    display: none;
+  }
+}
+}
+
+.order__form-title {
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: rem(14px);
+  color: #fff;
+  margin-bottom: rem(5px);
+  @include phones {
+    font-size: rem(16px);
+  }
+}
+
+.order__form-input {
+  border: rem(2px) solid transparent;
+  border-radius: rem(5px);
+  padding: rem(9px) rem(21px);
+  outline: none;
+  width: 100%;
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  color: $black;
+  &:focus {
+    border-color: $yellow;
+  }
+
+}
+
+.order__form-input--textarea {
+ min-height: rem(119px);
+ resize: vertical;
+}
+.order__form-block--radio{
+  display: flex;
+}
+
+.order__radio, .order__checkbox {
+  display: flex;
+  align-items: center;
+  margin-right: rem(20px);
+  position: relative;
+}
+
+
+input[type="radio"], input[type="checkbox"] {
+  display: none;
+}  
+
+.order__radio-fake {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: rem(16px);
+  height: rem(16px);
+  background-color:$white;
+  border-radius: 50%;
+}
+.order__checkbox-fake {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0.9375rem;
+  height: 0.9375rem;
+  background-color:$white;
+}
+.order__radio-title, .order__checkbox-title {
+  font-family: 'Ubuntu';
+  font-size: rem(14px);
+  color: $white;
+  margin-left: rem(10px);
+  font-weight: 300;
+  @include phones {
+    font-size: rem(16px);
+  }
+}
+
+input[type="radio"]:checked ~ .order__radio-fake::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: rem(8px);
+  height: rem(8px);
+  border-radius: 50%;
+  background: $orange;
+}
+input[type="checkbox"]:checked ~ .order__checkbox-fake::before {
+  content: "";
+  display: block;
+  width: 0.5rem;
+  height: 0.25rem;
+  position: absolute;
+  border-radius: 0.125rem;
+  top: 0.275rem;
+  border-left: 0.25rem solid #e35028;
+  border-bottom: 0.25rem solid #e35028;
+  transform: rotate(-45deg);
+}
+.order__form-button--reset {
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: none;
+  background: transparent;
+  margin-left: rem(20px);
+  font-size: rem(14px);
+  font-weight: 300;
+  @include phones {
+    font-size: rem(16px);
+  }
+}

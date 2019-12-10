@@ -3,40 +3,91 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  position: relative;
 }
 .benefits__container {
   height: 100%;
+
 }
 .benefits__title {
   text-align: center;
-  padding-top: 133px;
+  margin-top: rem(133px);
   color: $black;
+  @include phones {
+    font-size: 3.5rem;
+    margin-top: rem(105px);
+  }
 }
 .benefits__list {
   display: flex;
   justify-content: space-between;
-  margin-top: 55px;
-} 
+  margin-top: rem(55px);
+  @include phones {
+    flex-direction: column;
+    margin-top: 0;
+    padding: 0 rem(30px) 0 rem(30px);
+    }
+  }
+
+.benefits__description {
+  @include phones {
+    // margin-left: rem(28px);
+    text-align: left;
+    // width: 90%;
+  }
+}
+// .benefits__icon {
+// height: rem(97px);
+// width: rem(90px);
+//   @include phones {
+//     width: 15.9375rem;
+//   }
+// }
+
+.benefits__icon-pic {
+  width: 90%;
+  height: rem(100px);
+  svg {
+    max-width: 95%;
+  }
+  @include phones {
+    position: static;
+    transform: none;
+  }
+}
+
 .benefits__subtitle {
   font-family: "Lifehack-Medium";
-  margin-top: 33px;
-  font-size: 24px;
+  margin-top: rem(33px);
+  font-size: rem(24px);
   line-height: 1;
   text-align: center;
-  
+  @include phones {
+    margin-top: 0;
+    text-align: left;
+    font-size: rem(28px);
+  }  
 }
 .benefits__item {
   width: calc(100% / 3 - 25px);
   display: flex;
   flex-flow: column;
+  align-items: center;
+  @include phones {
+    width: 100%;
+    flex-direction: row;
+    margin-top: rem(50px);
+  }
 }
 .benefits__text {
   font-family: "Ubuntu";
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
   line-height: 1.71;
   opacity: 0.8;
-  margin-top: 20px;
+  margin-top: rem(20px);
   text-align: center;
+  @include phones {
+    text-align: left;
+    font-size: rem(15px);
+  }  
 }

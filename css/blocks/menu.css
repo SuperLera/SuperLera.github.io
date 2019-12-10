@@ -1,0 +1,27 @@
+.menu {
+  background: url("../../img/bg/menu-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.menu__title {
+  position: absolute;
+  top: 10%;
+  left: 10%; }
+
+.menu-accordeon__trigger--meat {
+  background-image: url("./img/bg/menu-bg--meat.png"); }
+
+.menu-accordeon__trigger--vegi {
+  background-image: url("./img/bg/menu-bg--vegi.png"); }
+
+.menu-accordeon__trigger--diet {
+  background-image: url("./img/bg/menu-bg--diet.png"); }
+
+.menu-accordeon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1; }

@@ -1,0 +1,72 @@
+.menu {
+  background: url('../../img/bg/menu-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+	position: relative;
+}
+
+.menu__title {
+	position: absolute;
+	top: 10%;
+  left: 10%;
+  color: $white;
+  @include tablets {
+    top: 5%;
+    left: 5%;
+  }
+  @include phones {
+    font-size: 3rem;
+    left: 8%;
+  }
+}
+
+.menu-accordeon {
+	position: absolute;
+	right: 0;
+	top: 0;
+  bottom: 0;
+  display: flex;
+}
+.menu-accordeon-item{
+  height: 100%;
+  display: flex;
+}
+
+.menu-accordeon__trigger {
+  display: flex;
+  justify-content: center;
+  width: 6rem;
+  text-decoration: none;
+  height: 100%;
+  position: relative;
+  @include phones {
+    width: 4rem;
+  }
+}
+.menu-accordeon__trigger:before {
+  content: "";
+  position: absolute;
+  background: #313436;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.menu-accordeon__trigger-text {
+  color: #fff;
+  writing-mode: tb;
+  transform: rotate(180deg);
+  margin-bottom: 2.5rem;
+  font-size: 2.5rem;
+}
+.menu-accordeon__content {
+  width: 0rem;
+  overflow: hidden;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+// .menu-accordeon__text {
+//   overflow: hidden;
+// }

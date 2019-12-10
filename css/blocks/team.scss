@@ -1,0 +1,136 @@
+.team {
+  background-image: url("../img/bg/team-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+}
+.team__aside {
+  position: absolute;
+  height: 100%;
+  background: rgba($color: #343739, $alpha: 0.8);
+  width: 50%;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include tablets {
+    width: 100%;
+  }
+  
+}
+.team__content{
+  width: 50%;
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+  }
+}
+.team__title {
+  margin-bottom: rem(55px);
+}
+.accordeon {
+  color: $white;
+}
+.team__accordeon {
+  @include tablets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.team__item {
+  margin-bottom: rem(40px);
+  @include tablets {
+    text-align: center;
+    align-items: center;
+  }
+}
+.team__item-link{
+  text-decoration: none;
+  font-family: 'Gagalin-Regular';
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: $white;
+  @include tablets {
+    display: inline-flex;
+    font-size: rem(25px);
+  }
+}
+.team__item-link:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.625rem;
+  border: 0.3125rem solid transparent;
+  border-top: 0.3125rem solid #f9b43b;
+  margin-top: 0.7rem;
+}
+
+
+.team__item-description {
+  display: flex;
+  height: 0rem;
+  overflow: hidden;
+  margin-top: 1.0625rem;
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+.team__item-content {
+  @include tablets {
+    margin-top: rem(22px);
+  }
+}
+
+.team__item-pic {
+    margin-left: 0.9375rem;
+    margin-right: 1.3125rem;
+    width: 6.25rem;
+    height: 6.25rem;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+.team__item-__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.team__item--active .team__item-link {
+  color: $yellow;;
+}
+
+.team__item--active .team__item-link:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 0.625rem;
+  border: 0.3125rem solid transparent;
+  border-bottom: 0.3125rem solid #f9b43b;
+  margin-bottom: 0.7rem;
+}
+.team__item-title{
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  font-size: rem(14px);
+  margin-bottom: rem(18px);
+  @include tablets {
+    font-size: rem(15px);
+  }
+}
+.team__item-text{
+  font-family: 'Ubuntu';
+  font-weight: 300;
+  font-size: rem(14px);
+  line-height: 1.714;
+}
+.team__item--active .team__item-description {
+  height: 100%;
+}
