@@ -1,0 +1,8 @@
+.video {
+  background: url("../../img/bg/video-bg.png") center center/cover no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }

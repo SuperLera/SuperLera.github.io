@@ -1,0 +1,19 @@
+.video {
+  background: url('../../img/bg/video-bg.png') center center/cover no-repeat;
+  // display: flex;
+  // align-items: center;
+}
+
+.video__container {
+  align-items: center; 
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+}
+.video__title {
+  color: $black;
+  margin-bottom: rem(30px);
+  @include phones {
+    margin: 0 rem(60px) rem(30px);
+  }
+}
