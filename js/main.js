@@ -260,3 +260,100 @@ myForm.addEventListener('submit', function(e) {
       }
     }
 
+    //pageScroll
+    const sections = $('.section');
+    const display = $('.maincontent');
+    let inScroll = false;
+
+    const md = new MobileDetect(window.navigator.userAgent);
+    const isMobile = md.mobile();
+
+    const performTransition = sectionEq => {
+      if (inScroll === false) {
+        inScroll = true;
+        const position = sectionEq * -100;
+
+        sections
+        .eq(sectionEq)
+        .addClass("active")
+        .siblings()
+        .removeClass("active");
+        
+        display.css({
+          transform: `translateY(${position}%)`
+        });
+
+        setTimeout(() => {
+          inScroll = false;
+
+          $('.fixed-menu__item').eq(sectionEq).addClass("fixed-menu__item--active").siblings().removeClass("fixed-menu__item--active");
+        }, 1300);
+      }
+    }
+
+    const scrollToSection = direction => {
+      const activeSection = sections.filter('.active');
+      const nextSection = activeSection.next();
+      const prevSection = activeSection.prev();
+
+      if (direction === "next" && nextSection.length){
+        performTransition(nextSection.index());
+      }
+      if (direction === "prev" && prevSection.length){
+        performTransition(prevSection.index());
+      }
+    };
+
+    $(window).on("wheel", e => {
+      const deltaY = e.originalEvent.deltaY;
+
+      if (deltaY > 0) {
+        scrollToSection("next");
+      }
+      if (deltaY < 0) {
+        scrollToSection("prev");
+      }
+    });
+
+    $(document).on("keydown", e => {
+      const tagName = e.target.tagName.toLowerCase();
+
+      if(tagName !== "input" && tagName !== "textarea") {
+        switch (e.keyCode) {
+          case 38:
+            scrollToSection("prev");
+            break;
+            case 40:
+            scrollToSection("next");
+            break;
+        }
+      }
+    });
+
+    $("[data-scroll-to]").on("click", e => {
+      e.preventDefault();
+      const $this = $(e.currentTarget);
+      const target = $this.attr("data-scroll-to");
+
+      performTransition(target);
+    });
+
+    // разрешаем свайп на мобильниках
+  if (isMobile) {
+    $("body").swipe({
+      swipe: function(
+        event,
+        direction,
+        distance,
+        duration,
+        fingerCount,
+        feigerData
+      ) {
+        const scrollDirections = direction === "up" ? "next" : "prev";
+  
+        scrollToSection(scrollDirections);
+      }
+    });
+  }
+
+    

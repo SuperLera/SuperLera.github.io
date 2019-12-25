@@ -12,46 +12,47 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
-      <header class="header">
-        <div class="container header__container">
-          <img src="../img/icons/logo.png" alt="Логотип" class="logo">
-          <div class="header__menu">
-            <nav class="nav">
-              <ul class="nav__list">
-                <li class="nav__item">
-                  <a href="" class="nav__link">О нас</a>
-                </li>
-                <li class="nav__item">
-                  <a href="" class="nav__link">Бургеры</a>
-                </li>
-                <li class="nav__item">
-                  <a href="" class="nav__link">Команда</a>
-                </li>  
-                <li class="nav__item">
-                  <a href="" class="nav__link">Меню</a>
-                </li>
-                <li class="nav__item">
-                  <a href="" class="nav__link">Отзывы</a>
-                </li>
-                <li class="nav__item">
-                  <a href="" class="nav__link">Как мы работаем</a>
-                </li>
-                <li class="nav__item">
-                  <a href="" class="nav__link">Контакты</a>
-                </li>  
-              </ul>
-            </nav>
-          </div>
-          <div class="header__links">
-            <a class="btn" href="">Заказать</a>
-            <a class="hamburger-menu-link" href="">
-              <div class="hamburger-menu-link__bars"></div>
-            </a>
-          </div>
-        </div>
-      </header>
-      <section class="section promo">
+
+      <section class="section promo active">
         <div class="container section__container">
+          <header class="header">
+            <div class="container header__container">
+              <img src="../img/icons/logo.png" alt="Логотип" class="logo">
+              <div class="header__menu">
+                <nav class="nav">
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <a href="" class="nav__link" data-scroll-to="1"> О нас</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link" data-scroll-to="2">Бургеры</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link" data-scroll-to="3">Команда</a>
+                    </li>  
+                    <li class="nav__item">
+                      <a href="" class="nav__link" data-scroll-to="4">Меню</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link" data-scroll-to="5">Отзывы</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link" data-scroll-to="6">Как мы работаем</a>
+                    </li>
+                    <li class="nav__item">
+                      <a href="" class="nav__link" data-scroll-to="8">Контакты</a>
+                    </li>  
+                  </ul>
+                </nav>
+              </div>
+              <div class="header__links">
+                <a class="btn" href="" data-scroll-to="7">Заказать</a>
+                <a class="hamburger-menu-link" href="">
+                  <div class="hamburger-menu-link__bars"></div>
+                </a>
+              </div>
+            </div>
+          </header>
           <div class="promo__wrapper">
             <img src="../img/content/burgers/burger-promo.png" alt="" class="promo__img">
             <h1 class="title promo__title">
@@ -585,7 +586,7 @@
 
     </div>
   </div>
-  <section class="section__hamburger-nav">
+  <div class="sectio__hamburger-nav">
     <nav class="hamburger-nav">
       <a class="hamburger-nav__logo">
         <svg class="hamburgers-nav__logo-pic">
@@ -598,26 +599,26 @@
       </a>
       <ul class="hamburger-nav__list">
         <li class="hamburger-nav__item">
-          <a href="#" class="hamburger-nav__link">О Нас</a>
+          <a href="#" class="hamburger-nav__link" data-scroll-to="1">О Нас</a>
         </li>
         <li class="hamburger-nav__item">
-          <a href="#" class="hamburger-nav__link">Бургеры</a>
+          <a href="#" class="hamburger-nav__link" data-scroll-to="2">Бургеры</a>
         </li>
         <li class="hamburger-nav__item">
-          <a href="#" class="hamburger-nav__link">Команда</a>
+          <a href="#" class="hamburger-nav__link" data-scroll-to="3">Команда</a>
         </li>
         <li class="hamburger-nav__item">
-          <a href="#" class="hamburger-nav__link">Меню</a>
+          <a href="#" class="hamburger-nav__link" data-scroll-to="4">Меню</a>
         </li>
         <li class="hamburger-nav__item">
-          <a href="#" class="hamburger-nav__link">Отзывы</a>
+          <a href="#" class="hamburger-nav__link" data-scroll-to="5">Отзывы</a>
         </li>
         <li class="hamburger-nav__item">
-          <a href="#" class="hamburger-nav__link">Контакты</a>
+          <a href="#" class="hamburger-nav__link" data-scroll-to="8">Контакты</a>
         </li>
       </ul>
     </nav>
-</section>
+  </div>
   <div class="order__popup">
     <div class="order__popup-block">
       <p>Сообщение отправлено</p>
@@ -626,36 +627,38 @@
   </div>
   <ul class="fixed-menu">
     <li class="fixed-menu__item fixed-menu__item--active">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="1" aria-label="О нас"></a>
     </li>
     <li class="fixed-menu__item">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="2" aria-label="Бургеры"></a>
     </li>
     <li class="fixed-menu__item">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="3" aria-label="Команда"></a>
     </li>
     <li class="fixed-menu__item">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="4" aria-label="Меню"></a>
     </li>
     <li class="fixed-menu__item">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="5" aria-label="Отзывы"></a>
     </li>
     <li class="fixed-menu__item">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="6" aria-label="Как мы работаем"></a>
     </li>
     <li class="fixed-menu__item">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="8" aria-label="Контакты"></a>
     </li>
     <li class="fixed-menu__item">
-      <a class="fixed-menu__dot" href="#" aria-label="О нас"></a>
+      <a class="fixed-menu__dot" href="" data-scroll-to="7" aria-label="Заказать"></a>
     </li>
   </ul>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.6/mobile-detect.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.18/jquery.touchSwipe.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <script src="../js/owl.carousel.min.js"></script>
   <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="js/player.js"></script>
+  <!-- <script src="js/player.js"></script> -->
   <script src="../js/main.js"></script>
 </body>
 </html>
