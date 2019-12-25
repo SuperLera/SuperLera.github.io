@@ -28,7 +28,7 @@
   bottom: 0;
   display: flex;
 }
-.menu-accordeon-item{
+.menu-accordeon__item {
   height: 100%;
   display: flex;
 }
@@ -65,8 +65,20 @@
   width: 0rem;
   overflow: hidden;
   color: #fff;
-  background: rgba(0, 0, 0, 0.5);
+  background-color: rgba(70, 70, 70, 0.9);
 }
-// .menu-accordeon__text {
-//   overflow: hidden;
-// }
+.menu-accordeon__item--active .menu-accordeon__content {
+  width: 40rem;
+  @include tablets {
+    width: 100%;
+  }
+  padding: rem(60px) rem(35px);
+  @include phones {
+    padding: rem(15px) rem(10px);
+    line-height: 1.5;
+  }
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  line-height: 1.714;
+}
+

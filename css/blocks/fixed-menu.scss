@@ -18,9 +18,6 @@
   margin-bottom: rem(3px);
   position: relative;
 
-  &--active {
-    border-color: $white;
-  }
 
   &:before {
     content: '';
@@ -33,4 +30,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+}
+
+.fixed-menu__item--active .fixed-menu__dot {
+  border-color: $white;
 }

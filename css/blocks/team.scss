@@ -28,6 +28,9 @@
     align-items: center;
     // justify-content: center;
   }
+  @include phones {
+    width: 61%;
+  }
 }
 .team__title {
   margin-bottom: rem(55px);

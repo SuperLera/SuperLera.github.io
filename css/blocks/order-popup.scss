@@ -1,0 +1,29 @@
+.order__popup {
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.order__popup--active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order__popup-block {
+  width: rem(250px);
+  height: rem(100px);
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.order__popup-block p {
+  margin-bottom: rem(10px);
+}

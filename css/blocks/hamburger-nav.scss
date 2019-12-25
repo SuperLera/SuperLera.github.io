@@ -1,0 +1,84 @@
+.section__hamburger-nav {
+  position: relative;
+}
+.hamburger-nav {
+display: none;
+}
+.hamburger-nav--active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: rgba($color: #000000, $alpha: 0.97);
+}
+.hamburger-nav__logo{
+  position: absolute;
+  top: 0.75rem;
+  left: 1.25rem;
+}
+.hamburgers-nav__logo-pic {
+  height: rem(70px);
+  width: rem(90px);
+}
+
+.hamburger-nav__list {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+.hamburger-nav__item {
+  margin-top: rem(10px);
+}
+.hamburger-nav__link {
+  color: $white;
+  font-family: 'Ubuntu';
+  font-size: rem(24px);
+  font-weight: 300;
+  line-height: rem(40px);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.hamburger-nav__item:after {
+  content: '';
+  display: block;
+  width: rem(4px);
+  height: rem(4px);
+  background-color:$white;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: rem(10px);
+}
+.hamburger-nav__item:last-child::after {
+  display: none;
+}
+.close {
+  display: flex;
+  position: fixed;
+  top: 3%;
+  right: 2%;
+  width: 1.875rem;
+  height: 1.875rem;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.close__line {
+  position: absolute;
+  width: 80%;
+  height: rem(4px);
+  z-index: 20;
+  background-color: $white;
+  border-radius: rem(2px);
+}
+.close__line--left {
+  transform: rotate(-45deg);
+}
+.close__line--right {
+  transform: rotate(45deg);
+}
+
