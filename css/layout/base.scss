@@ -23,6 +23,9 @@ body {
   font-family: "Ubuntu";
   color: $black;
 }
+.overflow {
+  overflow: hidden;
+}
 
 .wrapper {
   position: relative;

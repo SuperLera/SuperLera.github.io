@@ -29,10 +29,15 @@
 }
 
 
+.review__btn:hover, .review__btn1:hover, .review__btn2:hover, .review__btn3:hover, .review__btn4:hover, .review__btn5:hover, .review__btn6:hover, .review__btn7:hover {
+  background-color: blue;
+}
+
 .reviews__hover {
   opacity: 0;
   color: $white;
   position: absolute;
+  z-index: 500;
   top: 0;
   bottom: 0;
   left: 0;

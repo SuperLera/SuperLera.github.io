@@ -446,6 +446,9 @@ body {
   font-family: "Ubuntu";
   color: #2f3234; }
 
+.overflow {
+  overflow: hidden; }
+
 .wrapper {
   position: relative;
   width: 100%;
@@ -1003,7 +1006,8 @@ button {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  position: relative; }
   @media screen and (max-width: 768px) {
     .burgers__slider-item {
       -webkit-box-orient: vertical;
@@ -1014,10 +1018,6 @@ button {
     .burgers__slider-item {
       margin-left: 0;
       margin-right: 0; } }
-
-.burgers__slider-left {
-  margin-right: 0.625rem;
-  position: relative; }
 
 @media screen and (max-width: 768px) {
   .burgers__slider-info {
@@ -1076,7 +1076,10 @@ button {
   justify-content: center;
   position: absolute;
   top: 0;
-  left: 0; }
+  left: 0;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
   @media screen and (max-width: 480px) {
     .burgers__slider-ingredients {
       top: 1.5625rem; } }
@@ -1172,6 +1175,64 @@ button {
   font-size: 1.875rem;
   letter-spacing: -0.04688rem;
   margin-left: -0.9375rem; }
+
+.ingredients__drop-menu {
+  width: 16.875rem;
+  height: 20.625rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  left: -312.5rem;
+  padding: 0.9375rem 1.25rem;
+  -webkit-box-shadow: 2.5px 4.3px 5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 2.5px 4.3px 5px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 0.3125rem;
+  -webkit-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  opacity: 0; }
+
+.ingredients__elem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 0.1875rem;
+  font-family: 'Ubuntu';
+  color: #2f3234;
+  line-height: 1.714;
+  font-weight: 600;
+  font-size: 0.875rem; }
+
+.ingredients__elem-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.ingredients__img {
+  margin-right: 1.25rem; }
+
+.ingredients__pic {
+  width: 2.8125rem;
+  height: 2.5rem; }
+
+.burgers__slider-ingredients:hover {
+  background-color: #e35028; }
+
+.burgers__slider-ingredients:hover .ingredients__drop-menu {
+  opacity: 1;
+  left: 5.625rem; }
 
 .team {
   background-image: url("../img/bg/team-bg.png");
@@ -1469,10 +1530,14 @@ button {
   -o-object-position: center;
   object-position: center; }
 
+.review__btn:hover, .review__btn1:hover, .review__btn2:hover, .review__btn3:hover, .review__btn4:hover, .review__btn5:hover, .review__btn6:hover, .review__btn7:hover {
+  background-color: blue; }
+
 .reviews__hover {
   opacity: 0;
   color: #fff;
   position: absolute;
+  z-index: 500;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1518,6 +1583,70 @@ button {
   @media screen and (max-width: 480px) {
     .reviews__text {
       display: none; } }
+
+.full-review {
+  background-color: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none; }
+
+.full-review--popup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.full-review__inner {
+  width: 28.75rem;
+  height: 15.9375rem;
+  border-radius: 5px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
+  padding: 0.75rem 1.3125rem; }
+
+.full-review__close {
+  position: absolute;
+  top: 8%;
+  right: 4%; }
+
+.full-review__close-btn {
+  width: 1.25rem;
+  height: 1.25rem; }
+
+.full-review__title {
+  font-size: 0.875rem;
+  font-family: 'Gagalin-Regular';
+  color: #2f3234;
+  line-height: 2.008;
+  text-align: left;
+  margin-bottom: 0.9375rem; }
+
+.full-review__content p {
+  font-size: 0.875rem;
+  font-family: 'Ubuntu';
+  color: #2f3234;
+  line-height: 1.714; }
 
 .video {
   background: url("../../img/bg/video-bg.png") center center/cover no-repeat; }

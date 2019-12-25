@@ -47,6 +47,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+  position: relative;
   @include tablets {
     flex-direction: column;
     // margin-left: rem(90px);
@@ -58,10 +59,10 @@
     margin-right: 0;
   }
 }
-.burgers__slider-left {
-  margin-right: rem(10px);
-  position: relative;
-}
+// .burgers__slider-left {
+//   margin-right: rem(10px);
+//   position: relative;
+// }
 .burgers__slider-info {
   @include tablets {
     display: flex;
@@ -104,6 +105,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  transition: 0.5s;
   @include phones {
     top: rem(25px);
   }

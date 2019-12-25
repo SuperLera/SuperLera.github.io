@@ -1,0 +1,12 @@
+.ingredients__drop-menu {
+  width: rem(270px);
+  height: rem(330px);
+  background-color: #fff;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+  left: rem(50px); }
+
+.ingredients__pic {
+  width: rem(45px);
+  height: rem(40px); }

@@ -14,6 +14,100 @@ closeCross.addEventListener('click', function(e) {
   document.body.classList.remove("overflow");
 });
 
+//review popup
+const reviewButton = document.querySelector(".review__btn");
+const reviewButton1 = document.querySelector(".review__btn1");
+const reviewButton2 = document.querySelector(".review__btn2");
+const reviewButton3 = document.querySelector(".review__btn3");
+const reviewButton4 = document.querySelector(".review__btn4");
+const reviewButton5 = document.querySelector(".review__btn5");
+const reviewButton6 = document.querySelector(".review__btn6");
+const reviewButton7 = document.querySelector(".review__btn7");
+const reviewPopup = document.querySelector(".full-review");
+const closeReview = document.querySelector(".full-review__close");
+
+reviewButton.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  });
+ 
+ reviewButton1.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  }); 
+ reviewButton2.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  }); 
+  reviewButton3.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  }); 
+  reviewButton4.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  }); 
+  reviewButton5.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  }); 
+   reviewButton6.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  }); 
+   reviewButton7.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.add("full-review--popup");
+  document.body.classList.add("overflow");
+  });
+  closeReview.addEventListener('click', function(e) {
+  e.preventDefault();
+  reviewPopup.classList.remove("full-review--popup");
+  document.body.classList.remove("overflow");
+  }); 
+
 //team
 const teamMembers = document.querySelectorAll(".team__item");
 // const teamMemberActive = document.querySelector(".team__item--active");
@@ -100,7 +194,7 @@ myForm.addEventListener('submit', function(e) {
             center: [59.939095, 30.315868],
             // Уровень масштабирования. Допустимые значения:
             // от 0 (весь мир) до 19.
-            zoom: 12
+            zoom: 11
         });
         myMap.behaviors.disable('scrollZoom');
         {

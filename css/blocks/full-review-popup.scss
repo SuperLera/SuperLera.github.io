@@ -1,0 +1,55 @@
+.full-review{
+  background-color: rgba($color: #000000, $alpha: 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+}
+
+.full-review--popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.full-review__inner {
+  width: rem(460px);
+  height: rem(255px);
+  border-radius: 5px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  padding: rem(12px) rem(21px);
+}
+
+.full-review__close {
+  position: absolute;
+  top: 8%;
+  right: 4%;
+}
+
+.full-review__close-btn {
+  width: rem(20px);
+  height: rem(20px);
+}
+.full-review__title {
+  font-size: rem(14px);
+  font-family: 'Gagalin-Regular';
+  color: rgb(47, 50, 52);
+  line-height: 2.008;
+  text-align: left;
+  margin-bottom: rem(15px);
+}
+.full-review__content p {
+  font-size: rem(14px);
+  font-family: 'Ubuntu';
+  color: rgb(47, 50, 52);
+  line-height: 1.714;
+}
+
+
